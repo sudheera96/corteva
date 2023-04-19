@@ -13,12 +13,6 @@ app = Flask(__name__)
 api = Api(app,title='My Weather Flask Application',default="Corteva", default_label="For Both Weathear Data and Weather Stats click on DropDown")
 
 
-# Create a Swagger documentation endpoint
-# @api.route('/api/spec')
-# class SwaggerSpec(Resource):
-#     def get(self):
-#         return api.__schema__
-
 
 @api.route('/weather/<int:page>/<int:per_page>/<string:year>/<string:station_id>')
 class WeathersData(Resource):
@@ -134,8 +128,8 @@ app.register_blueprint(swaggerui_blueprint)
 
 ## Execute ingestor and analyser first then run app
 if __name__ == '__main__':
-    # ingestor = WeatherDataIngestor('sqlite:///weatherus.db')
-    # ingestor.ingest('wx_data')
-    # analyzer = WeatherAnalyzer('sqlite:///weatherus.db')
-    # analyzer.calculate_statistics()
+    ingestor = WeatherDataIngestor('sqlite:///weatherus.db')
+    ingestor.ingest('wx_data')
+    analyzer = WeatherAnalyzer('sqlite:///weatherus.db')
+    analyzer.calculate_statistics()
     app.run(debug=True)
