@@ -68,12 +68,19 @@ To prevent duplicates, the script will use a unique constraint on the (station_i
 ## API Design
 In this example, we're using the flask_swagger_ui package to create the Swagger UI blueprint 
 We then define two routes, one for getting the weather data and one for getting the weather stats. The data is queried from the database and formatted as JSON. Finally, we return the JSON response using Flask's jsonify function.
-
+```
 api/weather
+```
 provide Page Number, Number of items per Page, Station Id, Year 
 
+
+```
 api/weather/stats
+```
 provide station id, year 
+
+![image](https://user-images.githubusercontent.com/22390581/232990714-7d598954-6dcb-4b7f-847b-ce8218ae049d.png)
+
 
 To see the Swagger UI documentation, you can navigate to http://localhost:5000/
 
