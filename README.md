@@ -77,7 +77,10 @@ provide station id, year
 
 To see the Swagger UI documentation, you can navigate to http://localhost:5000/
 
+## Run Project
+
 ```
+Add wx_data folder to this project 
 Run Data Ingestion, Data Analyser then Run app
 ```
 
