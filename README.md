@@ -1,6 +1,7 @@
 # corteva
 
 ## Project Architecture
+The data present in wx_data of all .txt files are stored in to weather Records table of Weather Database. On top of that table, data analysis are performed and results are stored to Weather Stats table. The information of those two tables are seen via Flask API, api/weather and api/weather/stats respectively. 
 
 ![](https://github.com/sudheera96/corteva/blob/main/architecture.PNG?raw=true)
 
