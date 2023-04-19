@@ -94,7 +94,7 @@ Run Data Ingestion, Data Analyser then Run app
 
 ## AWS Architecture
 
-API: To deploy an API on AWS, I would use Amazon API Gateway. API Gateway makes it easy to create, deploy, and manage APIs at any scale. It can handle the traffic from thousands or millions of users and integrates with other AWS services like Lambda, which we'll use to host our API code.
+API: To deploy an API on AWS, I would use Amazon API Gateway. API Gateway makes it easy to create, deploy, and manage APIs at any scale. 
 
 Database: For the database, I would use Amazon Relational Database Service (RDS). RDS is a fully managed database service that makes it easy to set up, operate, and scale a relational database in the cloud. I would choose the appropriate database engine for my use case, such as MySQL, PostgreSQL, or Aurora, and then set up the database instance on RDS.
 
