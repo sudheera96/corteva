@@ -72,6 +72,7 @@ We then define two routes, one for getting the weather data and one for getting 
 api/weather
 ```
 provide Page Number, Number of items per Page, Station Id, Year 
+![image](https://user-images.githubusercontent.com/22390581/232992055-8921a8d9-6e1c-4718-8c42-9be36dd0f2fd.png)
 
 
 ```
