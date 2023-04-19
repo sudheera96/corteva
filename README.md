@@ -66,7 +66,7 @@ To prevent duplicates, the script will use a unique constraint on the (station_i
 
 ## Data Analysis
 
-Iterate over the station IDs and calculate summary statistics for each year
+Iterate over the station IDs and calculate summary statistics for each year on top of data ingestion table i.e weather records table
 and store them weather_stats table
 
 ## API Design
