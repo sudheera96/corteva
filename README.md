@@ -4,14 +4,16 @@
 
 ![](https://github.com/sudheera96/corteva/blob/main/architecture.PNG?raw=true)
 
+```
 wx_data folder - contains txt files
+```
 
 ## Data Model
 This code defines two SQLAlchemy models for storing weather data and statistics in a relational database:
 
 ### WeatherData: 
 This model represents weather records and has the following columns:
-
+```
 id: Integer primary key for the record
 
 ingestion_time: DateTime column that stores the time the record was added to the database
@@ -25,11 +27,11 @@ max_temp: Float column that stores the maximum temperature for the day
 min_temp: Float column that stores the minimum temperature for the day
 
 precipitation: Float column that stores the amount of precipitation for the day
-
+```
 
 ### WeatherStats: 
 This model represents weather statistics calculated for each station and year, and has the following columns:
-
+```
 id: Integer primary key for the record
 
 analysis_ingestion_time: DateTime column that stores the time the statistics were added to the database
@@ -43,7 +45,7 @@ avg_max_temp: Float column that stores the average maximum temperature for the y
 avg_min_temp: Float column that stores the average minimum temperature for the year
 
 total_precipitation: Float column that stores the total precipitation for the year
-
+```
 The code assumes that there is one weather record per day per station, the same station ID is used consistently across records, and the year is stored as an integer in the WeatherStats table.
 
 
@@ -64,6 +66,8 @@ To prevent duplicates, the script will use a unique constraint on the (station_i
 
 ## Data Analysis
 
+Iterate over the station IDs and calculate summary statistics for each year
+and store them weather_stats table
 
 ## API Design
 In this example, we're using the flask_swagger_ui package to create the Swagger UI blueprint 
