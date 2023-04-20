@@ -107,4 +107,20 @@ Data ingestion: For the scheduled version of data ingestion code, I would use AW
 
 Scheduled execution: To schedule the Lambda function to run on a regular basis, I would use AWS CloudWatch Events. CloudWatch Events enables me to create rules that match incoming events and route them to one or more target functions, such as the Lambda function that performs data ingestion. I can set up the rule to run at a specific time, or on a regular schedule, such as every hour or every day.
 
+Data Collection: Data is collected from the RDS database using AWS Glue, which can extract data from relational databases like MySQL, PostgreSQL, or Aurora and transform it into a format suitable for analysis.
+
+Data Preparation: The collected data is prepared for analysis using Pandas or Apache Spark to perform tasks like cleaning, filtering, aggregating, or joining data from multiple sources.
+
+Data Storage: The prepared data is stored in Amazon S3, a highly scalable and durable object storage service.
+
+Athena Integration: Athena is used to query and analyze data stored in Amazon S3, using standard SQL queries.
+
+Results Storage: The results of the data analysis are stored in a storage option like Amazon S3 or Amazon Redshift, depending on the size and complexity of the data.
+
+Pipeline Monitoring: The performance of the data analysis pipeline is monitored using AWS CloudWatch to monitor metrics like CPU usage, memory utilization, and data transfer rates. Alerts can also be set up to notify in case of issues or anomalies in the data.
+
+API Integration:The results of the data analysis can be integrated into the API Gateway, allowing users to query and access the data through API requests.
+
+Visualization: Data visualization can be done using tools like Tableau or QuickSight, allowing users to create interactive visualizations and dashboards to explore the data.
+
 Infrastructure as code: To manage the AWS resources that make up the API, database, and data ingestion code, I would use AWS CloudFormation. CloudFormation allows me to define my infrastructure as code, which means that I can create, update, and delete AWS resources in a predictable and repeatable way. I can define the API Gateway, RDS database, Lambda function, and CloudWatch Events rule in a CloudFormation template, which can be versioned, tested, and deployed just like any other code.
